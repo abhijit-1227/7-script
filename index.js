@@ -42,6 +42,44 @@
 
 
 //ternary oprater
-let age=20;
- let cont=(age>=18)?"voild age":"invaklid age";
- console.log(cont)
+// let age=20;
+//  let cont=(age>=18)?"voild age":"invaklid age";
+//  console.log(cont)
+
+
+//switch statement
+// let day =1
+// switch(day){
+//     case 1:console.log("monday");
+//     break;
+//     case 1:console.log("tuesday");
+//     break;
+//     case 1:console.log("thuesday");
+//       break;
+//     case 1:console.log("thriday");
+//       break;
+//     case 1:console.log("saterday");
+//       break;
+//     case 1:console.log("sunday");
+//       break;
+//       default:console.log("Invalid numbar");
+      
+    
+// }
+
+
+//loop
+
+
+// let i;
+// for (i=1; i<=10; i++){
+//     console.log(i);
+    
+// }
+
+let i=1;
+while (i <= 10) {
+  console.log(i);
+  
+  i++;
+}
