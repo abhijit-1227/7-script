@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #box {
+      width: 150px;
+      height: 100px;
+      background: lightgray;
+      text-align: center;
+      line-height: 100px;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <button id="btnColor">Change Color</button>
+  <button id="btnPadding">Change Padding</button>
+  <button id="btnSize">Change Size</button>
+
+  
+  <div id="box">Box</div>
+
+  <script>
+    const box = document.getElementById("box");
+
+    
+    document.getElementById("btnColor").onclick = function() {
+      box.style.backgroundColor = "lightblue";
+      
+    };
+
+    
+    document.getElementById("btnPadding").onclick = function() {
+      box.style.padding = "30px";
+      
+    }
+    
+    document.getElementById("btnSize").onclick = function() {
+      box.style.width = "250px";
+      box.style.height = "150px";
+      box.style.fontSize = "20px";
+    
+    };
+  </script>
+</body>
+</html>

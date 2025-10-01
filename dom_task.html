@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .student-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      margin: 10px 5px 20px 0;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">Our Students</h1>
+
+  <!-- Student Cards -->
+  <div class="student-card">
+    <h2 id="student1">Aarti Choudhary</h2>
+    <p class="course">Course: Java Full Stack</p>
+    <p class="message">Learning DOM manipulation in JavaScript</p>
+    <button onclick="showDetails('student1')">Show Details</button>
+  </div>
+
+  <div class="student-card">
+    <h2 id="student2">Rohan Sharma</h2>
+    <p class="course">Course: Python with Django</p>
+    <p class="message">Building projects with Django</p>
+    <button onclick="showDetails('student2')">Show Details</button>
+  </div>
+
+  <div class="student-card">
+    <h2 id="student3">Neha Verma</h2>
+    <p class="course">Course: Frontend Development</p>
+    <p class="message">Practicing HTML, CSS, and JavaScript</p>
+    <button onclick="showDetails('student3')">Show Details</button>
+  </div>
+
+  <!-- Action Buttons -->
+  <button onclick="highlightStudents()">Highlight Students</button>
+  <button onclick="resetStyles()">Reset Styles</button>
+
+  <script>
+    // Highlight Students function
+    function highlightStudents() {
+      // 1. Change main heading color to purple (getElementById)
+      document.getElementById("main-heading").style.color = "purple";
+
+      // 2. Change background color of all student cards (getElementsByClassName)
+      let cards = document.getElementsByClassName("student-card");
+      for (let card of cards) {
+        card.style.backgroundColor = "lightblue";
+      }
+
+      // 3. Change text color of all student names (getElementsByTagName)
+      let names = document.getElementsByTagName("h2");
+      for (let name of names) {
+        name.style.color = "darkblue";
+      }
+
+      // 4. Make the first message bold (querySelector)
+      let firstMessage = document.querySelector(".message");
+      firstMessage.style.fontWeight = "bold";
+
+      // 5. Make all messages italic (querySelectorAll)
+      let allMessages = document.querySelectorAll(".message");
+      allMessages.forEach(msg => {
+        msg.style.fontStyle = "italic";
+      });
+    }
+
+    // Reset Styles function
+    function resetStyles() {
+      // Reset heading
+      document.getElementById("main-heading").style.color = "";
+
+      // Reset cards
+      let cards = document.getElementsByClassName("student-card");
+      for (let card of cards) {
+        card.style.backgroundColor = "";
+      }
+
+      // Reset student names
+      let names = document.getElementsByTagName("h2");
+      for (let name of names) {
+        name.style.color = "";
+      }
+
+      // Reset messages
+      let allMessages = document.querySelectorAll(".message");
+      allMessages.forEach(msg => {
+        msg.style.fontWeight = "";
+        msg.style.fontStyle = "";
+      });
+    }
+
+    // Show Details function
+    function showDetails(studentId) {
+      let studentName = document.getElementById(studentId).innerText;
+      let course = document.getElementById(studentId).nextElementSibling.innerText;
+      alert(studentName + " - " + course);
+    }
+  </script>
+</body>
+</html>

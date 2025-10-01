@@ -77,9 +77,16 @@
     
 // }
 
-let i=1;
-while (i <= 10) {
-  console.log(i);
+// let i=1;
+// while (i <= 10) {
+//   console.log(i);
   
-  i++;
-}
+//   i++;
+// }
+
+
+//do ehile lopp
+// do {
+//   // code block to be executed
+// }
+// while (i<=10);

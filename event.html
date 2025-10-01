@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Div</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center; /* Horizontal center */
+      align-items: center;     /* Vertical center */
+      background: #f0f0f0;
+    }
+
+    .center-box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      border-radius: 10px;
+      background-image: url(https://cdn.pixabay.com/photo/2025/04/19/18/20/goose-9544312_1280.jpg);
+      
+ background-size: cover;   }
+  </style>
+</head>
+<body>
+  <div class="center-box">Centered</div>
+  <button onclick="change()">on/of</button>
+
+  <script>
+    let ison= false;
+    function change(){
+    const photichnage=document.getElementsByClassName("changer-box")
+    if(ison){
+    
+        
+        photichnage.style.backgroundImage="https://www.bing.com/images/search?view=detailV2&ccid=L%2FR3pE5l&id=CEB00B879CAAA7E5892A5A909B439A651725DA4A&thid=OIP.L_R3pE5lNESKNjUNqEOIbwAAAA&mediaurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fclose-up-goose-sunny-day_1048944-13271542.jpg&exph=626&expw=470&q=photo&ck=B2E2E83EE8B0F5CA989FA9D6616EC44C&idpp=rc&idpview=singleimage&form=rc2idp&ajaxhist=0&ajaxserp=0&cit=ccid_cSgjmqsQ*cp_0CB889F6A8A518D47E02F75C04155928*mid_18525E6D304077FEF76BF4C5BBE79EDBE051250E*thid_OIP.cSgjmqsQ5KmBQQF9qO-8zQHaFq&selectedindex=34&vt=2";
+    }
+    else{
+        photichnage.style.backgroundImage="https://tse1.mm.bing.net/th/id/OIP.0lisdLJtUQCPtczp7IqaIwHaE8?w=1920&h=1280&rs=1&pid=ImgDetMain&o=7&rm=3"
+    }
+    ison=!ison;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mybox2{
+            width: 200px;
+            height: 100px;
+            color: rgb(191, 15, 15);
+            background-color: rgb(13, 226, 98);
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding: 20px;}
+    </style>
+</head>
+<body>
+    <div id="mybox2">
+         background-color,
+         padding
+         size
+    </div>
+
+    <button id="btnColor">Change Color</button>
+
+    <button onclick="padding()">padding</button>
+    <button onclick="size()">Size</button>
+
+
+
+
+
+
+
+
+    <script>
+         const box = document.getElementById("mybox2");
+    document.getElementById("btnColor").onclick = function() {
+      box.style.backgroundColor = "lightblue";
+      
+    };
+
+
+   function padding(){
+    let box2 = document.getElementById("mybox2");
+    box2.style.padding = "60px";
+   }
+
+   function size(){
+    let box3 = document.getElementById("mybox2");
+    box3.style.height = "400px", width = "500px";}
+    </script>
+</body>
+</html>
+  
+ 
